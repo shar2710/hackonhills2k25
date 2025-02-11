@@ -1,204 +1,384 @@
-@media(max-width: 768px){
-	.header .nav .head  {
-		display: block;
-	}
+@media(max-width: 480px) {
+    .header .nav .head {
+        display: block;
+    }
 
-	.header {
-		width: 100%;
-		left: -100%;
-	}
+    .header {
+        width: 100%;
+        left: -100%;
+    }
 
-	.content.active {
-		left: 100%;
-	}
+    .content.active {
+        left: 100%;
+    }
 
-	body.active {
-		overflow: hidden;
-	}
+    body.active {
+        overflow: hidden;
+    }
 
-	.frame1 img {
-		height: 40%;
-		width: auto;
-	}
+    .frame1 img {
+        height: 30%;
+        width: auto;
+    }
 
-	.frame1-text {
-		width: 90%;
-		left: 5%;
-		font-size: 0.8em;
-		bottom: 20%;
-	}
+    .frame1-text {
+        width: 90%;
+        left: 5%;
+        font-size: 0.7em;
+        bottom: 20%;
+    }
 
-	.logo {
-		top: 40px;
-	}
+    .logo {
+        top: 30px;
+    }
 
-	.logo svg {
-		width: 200px;
-	}
+    .logo svg {
+        width: 150px;
+    }
 
-	.hamburger img {
-		height: 20px;
-	}
+    .hamburger img {
+        height: 15px;
+    }
 
-	.appteam-logo img {
-		height: 40px;
-		width: 35px;
-	}
+    .appteam-logo img {
+        height: 30px;
+        width: 25px;
+    }
 
-	.top-schedule {
-		padding: 20px 0px 20px 0px;
-	}
+    .top-schedule {
+        padding: 15px 0px 15px 0px;
+    }
 
-	.top-schedule-content svg {
-		height: 120px;
-	}
+    .top-schedule-content svg {
+        height: 100px;
+    }
 
-	.bottom-schedule {
-		width: 90%;
-		font-size: 0.7em;
-		padding: 20px 0px 20px 0px;
-	}
+    .bottom-schedule {
+        width: 90%;
+        font-size: 0.6em;
+        padding: 15px 0px 15px 0px;
+    }
 
-	.divider-middle {
-		width: 50%;
-	}
+    .divider-middle {
+        width: 50%;
+    }
 
-	.divider-left, .divider-right {
-		font-size: 0.8em;
-	}
+    .divider-left, .divider-right {
+        font-size: 0.7em;
+    }
 
-	.divider-left:hover, .divider-right:hover {
-		font-size: 0.8em;
-	}
+    .divider-left:hover, .divider-right:hover {
+        font-size: 0.7em;
+    }
 
-	.frame2 {
-		padding-bottom: 20px;
-	}
+    .frame2 {
+        padding-bottom: 15px;
+    }
 
-	.frame3 {
-		min-height: auto;
-		padding: 30px 0px 90px 0px;
-	}
-	.frame4 .img-back-left, .frame2 .img-back-left {
-		width: 400px;
-		top: 5%;
-	}
+    .frame3 {
+        min-height: auto;
+        padding: 20px 0px 60px 0px;
+    }
 
-	.frame4 .img-back-right, .frame2 .img-back-left {
-		top: 40%;
-		right: -10%;
-	}
+    .frame4 .img-back-left, .frame2 .img-back-left {
+        width: 300px;
+        top: 5%;
+    }
 
+    .frame4 .img-back-right, .frame2 .img-back-left {
+        top: 40%;
+        right: -10%;
+    }
 
-	.frame3 .gallery {
-		width: 90%;
-		left: 5%;
-	}
+    .frame3 .gallery {
+        width: 90%;
+        left: 5%;
+    }
 
-	.frame3 .gallery img {
-		width: 80%;
-	}
+    .frame3 .gallery img {
+        width: 70%;
+    }
 
-	.frame4 {
-		padding: 0px;
-		padding-bottom: 120px;
-	}
+    .frame4 {
+        padding: 0px;
+        padding-bottom: 100px;
+    }
 
-	.frame4 .sponsor-icons {
-		width: 90%;
-	}
+    .frame4 .sponsor-icons {
+        width: 90%;
+    }
 
-	.sponsor-icons .sponsor-icon img {
-		width: 100%
-	}
+    .sponsor-icons .sponsor-icon img {
+        width: 100%;
+    }
 
-	.sponsor-icons .sponsor-icon {
-		width: 49%;
-		padding: 5px;
-	}
+    .sponsor-icons .sponsor-icon {
+        width: 49%;
+        padding: 5px;
+    }
 
-	.sponsor-icons .sponsor-icon.main-sponsor {
-		width: 49%;
-	}
+    .sponsor-icons .sponsor-icon.main-sponsor {
+        width: 49%;
+    }
 
-	.sponsor-icons .sponsor-icon.secondary-sponsor {
-		width: 40%;
-	}
+    .sponsor-icons .sponsor-icon.secondary-sponsor {
+        width: 40%;
+    }
 
-	.sponsor-icons .sponsor-icon.advantIcon img {
-		width: auto;
-		height: 90px;
-	}
+    .sponsor-icons .sponsor-icon.advantIcon img {
+        width: auto;
+        height: 70px;
+    }
 
-	.sponsor-icons .sponsor-icon.rawIcon {
-		padding-top: 15px;
-	}
+    .sponsor-icons .sponsor-icon.rawIcon {
+        padding-top: 10px;
+    }
 
-	.sponsor-icons .sponsor-icon.rawIcon img {
-		height: 50px;
-		width: auto;
-	}
+    .sponsor-icons .sponsor-icon.rawIcon img {
+        height: 40px;
+        width: auto;
+    }
 
-	.frame5 {
-		padding-top: 0px;
-		padding-bottom: 20px;
-	}
+    .frame5 {
+        padding-top: 0px;
+        padding-bottom: 15px;
+    }
 
-	.faq {
-		font-size: 0.8em;
-	}
+    .faq {
+        font-size: 0.7em;
+    }
 }
 
-@media(min-width: 769px) and (max-width: 949px){
-	.fullOverlay.active {
-		display: block;
-		opacity: 1;
-	}
+@media(min-width: 481px) and (max-width: 768px) {
+    .header .nav .head {
+        display: block;
+    }
 
-	.header {
-		width: 30%;
-		left: -30%;
-	}
+    .header {
+        width: 100%;
+        left: -100%;
+    }
 
-	.content.active {
-		left: 30%;
-		filter: blur(1px);
-	}
+    .content.active {
+        left: 100%;
+    }
 
-	body.active {
-		overflow: hidden;
-	}
+    body.active {
+        overflow: hidden;
+    }
 
-	.divider {
-		width: 85%;
-	}
+    .frame1 img {
+        height: 40%;
+        width: auto;
+    }
 
-	.right-schedule {
-		width: 80%;
-	}
+    .frame1-text {
+        width: 90%;
+        left: 5%;
+        font-size: 0.8em;
+        bottom: 20%;
+    }
 
-	.frame3 .gallery img {
-		width: 45%;
-	}
+    .logo {
+        top: 40px;
+    }
+
+    .logo svg {
+        width: 200px;
+    }
+
+    .hamburger img {
+        height: 20px;
+    }
+
+    .appteam-logo img {
+        height: 40px;
+        width: 35px;
+    }
+
+    .top-schedule {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .top-schedule-content svg {
+        height: 120px;
+    }
+
+    .bottom-schedule {
+        width: 90%;
+        font-size: 0.7em;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .divider-middle {
+        width: 50%;
+    }
+
+    .divider-left, .divider-right {
+        font-size: 0.8em;
+    }
+
+    .divider-left:hover, .divider-right:hover {
+        font-size: 0.8em;
+    }
+
+    .frame2 {
+        padding-bottom: 20px;
+    }
+
+    .frame3 {
+        min-height: auto;
+        padding: 30px 0px 90px 0px;
+    }
+
+    .frame4 .img-back-left, .frame2 .img-back-left {
+        width: 400px;
+        top: 5%;
+    }
+
+    .frame4 .img-back-right, .frame2 .img-back-left {
+        top: 40%;
+        right: -10%;
+    }
+
+    .frame3 .gallery {
+        width: 90%;
+        left: 5%;
+    }
+
+    .frame3 .gallery img {
+        width: 80%;
+    }
+
+    .frame4 {
+        padding: 0px;
+        padding-bottom: 120px;
+    }
+
+    .frame4 .sponsor-icons {
+        width: 90%;
+    }
+
+    .sponsor-icons .sponsor-icon img {
+        width: 100%;
+    }
+
+    .sponsor-icons .sponsor-icon {
+        width: 49%;
+        padding: 5px;
+    }
+
+    .sponsor-icons .sponsor-icon.main-sponsor {
+        width: 49%;
+    }
+
+    .sponsor-icons .sponsor-icon.secondary-sponsor {
+        width: 40%;
+    }
+
+    .sponsor-icons .sponsor-icon.advantIcon img {
+        width: auto;
+        height: 90px;
+    }
+
+    .sponsor-icons .sponsor-icon.rawIcon {
+        padding-top: 15px;
+    }
+
+    .sponsor-icons .sponsor-icon.rawIcon img {
+        height: 50px;
+        width: auto;
+    }
+
+    .frame5 {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+
+    .faq {
+        font-size: 0.8em;
+    }
 }
 
-@media(min-width: 950px){
-	.fullOverlay.active {
-		display: block;
-		opacity: 1;
-	}
+@media(min-width: 769px) and (max-width: 949px) {
+    .fullOverlay.active {
+        display: block;
+        opacity: 1;
+    }
 
-	.header {
-		width: 25%;
-		left: -25%;
-	}
+    .header {
+        width: 30%;
+        left: -30%;
+    }
 
-	.content.active {
-		left: 25%;
-		filter: blur(1px);
-	}
+    .content.active {
+        left: 30%;
+        filter: blur(1px);
+    }
 
-	body.active {
-		overflow: hidden;
-	}
+    body.active {
+        overflow: hidden;
+    }
+
+    .divider {
+        width: 85%;
+    }
+
+    .right-schedule {
+        width: 80%;
+    }
+
+    .frame3 .gallery img {
+        width: 45%;
+    }
+}
+
+@media(min-width: 950px) and (max-width: 1200px) {
+    .fullOverlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .header {
+        width: 25%;
+        left: -25%;
+    }
+
+    .content.active {
+        left: 25%;
+        filter: blur(1px);
+    }
+
+    body.active {
+        overflow: hidden;
+    }
+
+    .frame3 .gallery img {
+        width: 50%;
+    }
+}
+
+@media(min-width: 1201px) {
+    .fullOverlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .header {
+        width: 20%;
+        left: -20%;
+    }
+
+    .content.active {
+        left: 20%;
+        filter: blur(1px);
+    }
+
+    body.active {
+        overflow: hidden;
+    }
+
+    .frame3 .gallery img {
+        width: 40%;
+    }
 }
