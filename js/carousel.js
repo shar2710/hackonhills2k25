@@ -20,7 +20,9 @@ nextBtn.addEventListener("click", () => {
 
 function updateCarousel() {
   const width = carousel.children[0].clientWidth;
-  carousel.style.transform = `translateX(-${currentIndex * (width + 30)}px)`; // Adjusted for margin
+  const carouselWidth = carousel.clientWidth;
+  const offset = (carouselWidth - width) / 2;
+  carousel.style.transform = `translateX(-${currentIndex * (width + 30) - offset}px)`; // Adjusted for margin and centering
 
   // Remove active class from all images
   Array.from(carousel.children).forEach((img) =>
@@ -31,5 +33,11 @@ function updateCarousel() {
   carousel.children[currentIndex].classList.add("active");
 }
 
-// Initialize the first image as active
 carousel.children[currentIndex].classList.add("active");
+
+function autoSlide() {
+  currentIndex = (currentIndex + 1) % carousel.children.length;
+  updateCarousel();
+}
+
+setInterval(autoSlide, 3000); 
