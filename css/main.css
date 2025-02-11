@@ -24,7 +24,7 @@ body {
   position: fixed;
   top: 0px;
   bottom: 0px;
-  background-color: #d3dcdf;
+  background-color: #2a8aa9;
   z-index: 12;
   text-align: center;
   -webkit-transition: left 0.3s;
@@ -137,7 +137,7 @@ body {
 
 .frame1 {
   background-color: rgba(213, 246, 255, 1);
-  height: 110%;
+  height: 100%;
 }
 
 .frame1 img {
@@ -203,7 +203,7 @@ body {
 
 .frame2 {
   background-color: rgba(33, 103, 120, 1);
-  min-height: 110%;
+  min-height: 60%;
   padding-bottom: 50px;
 }
 

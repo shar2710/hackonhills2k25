@@ -33,10 +33,8 @@ function updateCarousel() {
   carousel.children[currentIndex].classList.add("active");
 }
 
-// Initialize the first image as active
 carousel.children[currentIndex].classList.add("active");
 
-// Automatic sliding
 function autoSlide() {
   currentIndex = (currentIndex + 1) % carousel.children.length;
   updateCarousel();
