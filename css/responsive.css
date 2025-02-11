@@ -79,6 +79,16 @@
 		min-height: auto;
 		padding: 30px 0px 90px 0px;
 	}
+	.frame4 .img-back-left, .frame2 .img-back-left {
+		width: 400px;
+		top: 5%;
+	}
+
+	.frame4 .img-back-right, .frame2 .img-back-left {
+		top: 40%;
+		right: -10%;
+	}
+
 
 	.frame3 .gallery {
 		width: 90%;
