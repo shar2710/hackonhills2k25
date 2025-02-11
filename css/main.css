@@ -115,6 +115,13 @@ body {
   width: 70px;
 }
 
+@media (max-width: 480px) {
+  .appteam-logo img {
+    height: 40px; 
+    width: 50px;  
+  }
+}
+
 .fullOverlay {
   width: 100%;
   height: 100%;
