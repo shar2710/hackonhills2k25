@@ -25,7 +25,7 @@ body {
   top: 0px;
   bottom: 0px;
 left: 0px;
-  background-color: #2a8aa9;
+  background-color: #1b5664;
   z-index: 12;
   text-align: center;
   -webkit-transition: left 0.3s;
@@ -122,7 +122,7 @@ left: 0px;
 
 .appteam-logo img {
   height: 60px;
-  width: 70px;
+  width: 60px;
 }
 
 @media (max-width: 480px) {
@@ -425,6 +425,24 @@ left: 0px;
   padding: 75px 0px;
   min-height: 100%;
 }
+.frame3-text {
+  color: #ffffff;
+  font-family: "Lilita One";
+  font-size: 1.5em;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.frame3-text:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #10333c;
+  transform: scale(1.05);
+}
+  
+
 
 .frame3 .rotated {
   background-color: #174854;
@@ -453,8 +471,8 @@ left: 0px;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   filter: grayscale(100%);
-  width: 62%; /* Decreased size */
-  margin: 0 15px; /* Added margin for spacing */
+  width: 62%; 
+  margin: 0 15px; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.5s;
@@ -640,6 +658,7 @@ left: 0px;
 .footer-icons {
   padding: 5px;
 }
+
 
 .footer-text {
   padding: 5px;
