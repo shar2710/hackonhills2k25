@@ -24,6 +24,7 @@ body {
   position: fixed;
   top: 0px;
   bottom: 0px;
+left: 0px;
   background-color: #2a8aa9;
   z-index: 12;
   text-align: center;
@@ -38,9 +39,12 @@ body {
 
 .header .nav {
   list-style-type: none;
+  
+  
 }
 
 .header .nav .navItem {
+  
   padding: 15px 30px;
   color: #1b5664;
   cursor: pointer;
@@ -73,10 +77,16 @@ body {
 
 .header .nav .head .closeHeader {
   cursor: pointer;
+  position: absolute;
+    top: 15px;  /* Adjust as needed */
+    right: 15px;
+  
+ 
 }
 
 .header .nav .head img {
   height: 20px;
+  
 }
 
 .content {
@@ -92,7 +102,7 @@ body {
 .hamburger {
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px;
   color: white;
   z-index: 10;
   font-size: 2em;
@@ -106,7 +116,7 @@ body {
 .appteam-logo {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 10;
 }
 
