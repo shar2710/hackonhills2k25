@@ -207,6 +207,9 @@ left: 0px;
   transform: translateX(-50%);
   z-index: 5;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .frame1-text {
