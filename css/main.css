@@ -200,6 +200,14 @@ left: 0px;
   top: 0px;
   z-index: 5;
 }
+.apply-button {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  text-align: center;
+}
 
 .frame1-text {
   color: white;
@@ -217,6 +225,7 @@ left: 0px;
   padding: 5px;
   font-weight: bold;
 }
+
 
 .frame2 {
   background-color: rgba(33, 103, 120, 1);
@@ -582,6 +591,13 @@ left: 0px;
 
 .sponsor-icons .sponsor-icon.advantIcon img {
   width: 50%;
+}
+.sponsor-icons h1{
+  font-size: 2rem; 
+    font-weight: bold;
+    text-align: center;
+    color: #333; 
+    margin-bottom: 20px;
 }
 
 .sponsor-icons .sponsor-icon.rawIcon img {
