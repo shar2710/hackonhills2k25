@@ -200,17 +200,19 @@ left: 0px;
   top: 0px;
   z-index: 5;
 }
+
 .apply-button {
-  position: absolute;
-  bottom: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  text-align: center;
-  display: flex;
+  position: relative; 
+  z-index: 9999 !important; 
+  display: flex !important;
   justify-content: center;
   align-items: center;
+  height: 44px;
+  width: 320px;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
+
 .devfolio-button-iframe{
   justify-content: center;
 }
