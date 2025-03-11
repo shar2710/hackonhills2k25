@@ -230,22 +230,21 @@ left: 0px;
 
 .apply-button {
  
-  position: fixed; /* Fixes it in place relative to the viewport */
-z-index: 9999 !important; /* Puts it on top of everything */
+  position: relative; /* Fixes it in place relative to the viewport */
+ /* Puts it on top of everything */
 display: flex !important;
 justify-content: center;
 align-items: center;
 height: 44px;
 width: 320px;
-visibility: visible !important;
-opacity: 1 !important;
 top: 60%; /* Centers vertically */
 left: 50%; /* Centers horizontally */
 transform: translate(-50%, -50%); /* Offsets it back by 50% of its size */
 right: auto;
 }
+
 .container {
-  position: fixed; /* Fixes it in place relative to the viewport */
+  position: absolute; /* Fixes it in place relative to the viewport */
 z-index: 9999 !important; /* Puts it on top of everything */
 display: flex !important;
 justify-content: center;
