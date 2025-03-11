@@ -32,11 +32,7 @@ left: 0px;
   -moz-transition: left 0.3s;
   transition: left 0.3s;
 }
-.container {
-  position:absolute;
-  left:45%; 
-  top:45%; 
-}
+
 
 #devfolio-apply-now {  
     -ms-flex-align: center;
@@ -234,11 +230,63 @@ left: 0px;
 
 .apply-button {
  
-  position:absolute;
-  left:28%; 
-  top:45%; 
+  position: fixed; /* Fixes it in place relative to the viewport */
+z-index: 9999 !important; /* Puts it on top of everything */
+display: flex !important;
+justify-content: center;
+align-items: center;
+height: 44px;
+width: 320px;
+visibility: visible !important;
+opacity: 1 !important;
+top: 60%; /* Centers vertically */
+left: 50%; /* Centers horizontally */
+transform: translate(-50%, -50%); /* Offsets it back by 50% of its size */
+right: auto;
+}
+.container {
+  position: fixed; /* Fixes it in place relative to the viewport */
+z-index: 9999 !important; /* Puts it on top of everything */
+display: flex !important;
+justify-content: center;
+align-items: center;
+height: 44px;
+width: 320px;
+visibility: visible !important;
+opacity: 1 !important;
+top: 60%; /* Centers vertically */
+left: 50%; /* Centers horizontally */
+transform: translate(-50%, -50%); /* Offsets it back by 50% of its size */
+right: auto;
+
 }
 
+#devfolio-apply-now {  
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: #3770FF;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    text-align: center; 
+}
+
+#devfolio-apply-now:not([disabled]) {
+    cursor: pointer;
+}
+
+#devfolio-apply-now:hover {
+    background-color: #2954BF !important;
+}
 .devfolio-button-iframe{
   justify-content: center;
 }
