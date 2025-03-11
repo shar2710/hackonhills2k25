@@ -238,13 +238,6 @@ left: 0px;
   left:28%; 
   top:45%; 
 }
-.devfolio-container {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically (if needed) */
-  width: 100%;
-  height: 100vh; /* Optional: Adjust height if necessary */
-}
 
 .devfolio-button-iframe{
   justify-content: center;
