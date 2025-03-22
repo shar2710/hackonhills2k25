@@ -2430,12 +2430,22 @@
             </div>
           </div>
         </div>
-     
-      
-        <div class="frame3-text1">
-          <a href="contact.html" >
-          Reach Out Now</a>
-        </div>
+      </div>
+
+      <div class="frame framen">
+        <div class="framen-text">
+        
+            <h2>Contact Us</h2>
+            <p>Have any questions? Feel free to reach out to us!</p>
+  
+            <form id="contactForm">
+              <input placeholder="email" type="email" id="email" required />
+              <textarea placeholder="message" id="message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+            <div id="messageStatus" class="message-status"></div>
+          </div>
+        
       </div>
       
         
@@ -2464,5 +2474,56 @@
     <script src="./js/carousel.js"></script>
     <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
     <script src="./js/button.js"></script>
+    <script type="module">
+      // Import Firebase SDK
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
+
+      // Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAZVSOa17CtOlX68-ALnOmPvDJm3jy6M_0",
+        authDomain: "hackonhills-710a6.firebaseapp.com",
+        projectId: "hackonhills-710a6",
+        storageBucket: "hackonhills-710a6.firebasestorage.app",
+        messagingSenderId: "507755628378",
+        appId: "1:507755628378:web:1323234ec328be724fd563",
+        measurementId: "G-40ZMCEG4Q6"
+      };
+
+      // Initialize Firebase and Firestore
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      document.getElementById("contactForm").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        // Get form data
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if (email && message) {
+          try {
+            // Add data to Firestore
+            await addDoc(collection(db, "contactMessages"), {
+              email: email,
+              message: message,
+              timestamp: new Date()
+            });
+
+            // Display success message
+            document.getElementById("messageStatus").innerHTML = "<p style='color:green;'>Your message has been sent successfully! We'll get back to you soon.</p>";
+
+            // Clear the form
+            document.getElementById("contactForm").reset();
+          } catch (error) {
+            // Display error message if something goes wrong
+            document.getElementById("messageStatus").innerHTML = "<p style='color:red;'>There was an error sending your message. Please try again later.</p>";
+          }
+        } else {
+          // Display error message if fields are empty
+          document.getElementById("messageStatus").innerHTML = "<p style='color:red;'>Please fill in all the fields before submitting.</p>";
+        }
+      });
+    </script>
   </body>
 </html>

@@ -76,7 +76,7 @@ left: 0px;
   padding: 15px 30px;
   color: #1b5664;
   cursor: pointer;
-  font-family: "Lilita One";
+  font-family: "Didact Gothic";
   font-size: 1.2em;
   border-top: 1px solid rgba(23, 72, 84, 0.1);
   background-color: rgba(211, 220, 223, 1);
@@ -439,7 +439,7 @@ right: auto;
 .divider-left {
   display: inline-block;
   color: white;
-  font-family: "Lilita One";
+  font-family: "Didact Gothic";
   margin-left: 20px;
   position: absolute;
   left: 0px;
@@ -453,7 +453,7 @@ right: auto;
 .divider-right {
   display: inline-block;
   color: white;
-  font-family: "Lilita One";
+  font-family: "Didact Gothic";
   margin-left: 20px;
   position: absolute;
   right: 0px;
@@ -517,9 +517,32 @@ right: auto;
   padding: 75px 0px;
   min-height: 100%;
 }
+.framen {
+  background-color: #174854;
+  min-height: 80%;
+  padding: 75px 0px;  
+  font-family: 'Didact Gothic';
+  
+}
+.framen-text {
+   color: #ffffff;
+    
+    font-size: 1.2em;
+    text-align: center;
+  
+    
+    transition: all 0.3s ease-in-out;  
+    
+}
+.framen-text h2{
+  font-size: 2.5em;
+  padding: 5px;
+  font-weight: bold;
+  
+}
 .frame3-text {
   color: #ffffff;
-  font-family: "Lilita One";
+  font-family: "Didact Gothic";
   font-size: 1.5em;
   text-align: center;
   padding: 20px;
@@ -529,7 +552,7 @@ right: auto;
 }
 .frame3-text1 {
   color: #10333c;
-  font-family: "Lilita One";
+  font-family: "Didact Gothic";
   font-size: 1.5em;
   text-align: center;
   padding: 20px;
@@ -895,14 +918,14 @@ input, textarea {
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: "Lilita One";
+  font-family: "Didact Gothic";
 }
 
 button {
   margin-top: 20px;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Lilita One";
+  font-family: "Didact Gothic";
   width: 70%;
   margin-left: 15%;
 
