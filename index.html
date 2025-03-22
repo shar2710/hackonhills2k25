@@ -80,7 +80,8 @@
         <img src="./images/menu.svg" />
       </div>
       <div class="appteam-logo">
-        <a href="#top"><img src="./images/images/new_logo.png" title="App Team NITH"
+        <a href="#top"
+          ><img src="./images/images/new_logo.png" title="App Team NITH"
         /></a>
       </div>
       <div class="frame frame1">
@@ -813,14 +814,23 @@
           </svg>
         </div>
         <!-- MAIN LOGO END -->
-       
-        <div class="container">
-          <!-- Add button tag -->
-                <button id="devfolio-apply-now" style="text-transform: none;" onclick="window.open('https://hack-on-hills.devfolio.co')">
-    Apply with Devfolio</button>
 
-              </div>
-      
+        <div class="container" style="text-align: center">
+          <!-- Add button tag -->
+          <button
+            id="devfolio-apply-now"
+            style="
+              text-transform: none;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+            onclick="window.open('https://hack-on-hills.devfolio.co')"
+          >
+            Apply with Devfolio
+          </button>
+        </div>
+
         <div class="frame1-text">
           <span class="date"> NIT Hamirpur</span>
           Sixth Edition of Annual Hackathon Organised by App Team NITH.
@@ -2224,14 +2234,12 @@
             <div class="divider-left inactive">&lt;&lt;&nbsp;&nbsp;Prev</div>
             <div class="divider-middle"></div>
             <div class="divider-right">Next&nbsp;&nbsp;&gt;&gt;</div>
-        </div>
+          </div>
           <div class="bottom-schedule">
             <div class="bottom-schedule-content">
               <h2>Registration Phase</h2>
               <div class="schedule-content">
-                <h4>
-                  Registrations are now live!
-                </h4>
+                <h4>Registrations are now live!</h4>
               </div>
             </div>
             <div class="bottom-schedule-content">
@@ -2331,43 +2339,52 @@
               <div class="track-name">General</div>
             </div>
           </div>
-          
+
           <div class="frame frame3">
             <div class="frame4-content">
-                <h1> Sponsors </h1>
-                <div class="sponsor-icons">
-                    <h1>Gold</h1>
-                    <div class="sponsor-icon gold-sponsor">
-                        <a href="https://devfolio.co" target="__blank">
-                            <img src="./images/Sponsors/Devfolio_Logo-Colored@2x.png" alt="DEVFOLIO LOGO">
-                        </a>
-                    </div>
-                    <div class="sponsor-icon gold-sponsor">
-                        <a href="https://ethindia.co" target="__blank">
-                            <img src="./images/Sponsors/ethindia-dark.png" alt="ETHINDIA LOGO">
-                        </a>
-                    </div>
-                    <h2>Silver</h2>
-                    <div class="sponsor-icon gold-sponsor">
-                      <a href="https://www.tradegenius.com/" target="__blank">
-                          <img src="./images/Sponsors/gw.png" alt="GENIUS WALLET LOGO" style="width: 80px;">
-                      </a>
-                  </div>
+              <h1>Sponsors</h1>
+              <div class="sponsor-icons">
+                <h1>Gold</h1>
+                <div class="sponsor-icon gold-sponsor">
+                  <a href="https://devfolio.co" target="__blank">
+                    <img
+                      src="./images/Sponsors/Devfolio_Logo-Colored@2x.png"
+                      alt="DEVFOLIO LOGO"
+                    />
+                  </a>
                 </div>
+                <div class="sponsor-icon gold-sponsor">
+                  <a href="https://ethindia.co" target="__blank">
+                    <img
+                      src="./images/Sponsors/ethindia-dark.png"
+                      alt="ETHINDIA LOGO"
+                    />
+                  </a>
+                </div>
+                <h2>Silver</h2>
+                <div class="sponsor-icon gold-sponsor">
+                  <a href="https://www.tradegenius.com/" target="__blank">
+                    <img
+                      src="./images/Sponsors/gw.png"
+                      alt="GENIUS WALLET LOGO"
+                      style="width: 80px"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
-        </div>
-        
-        
-<div class="frame frame4">
-          <div class="frame3-text">
-            Interested in making 'HackOnHills' a huge success.<br />
-            Come join us by sponsoring us. 
-      <!--Check the &nbsp;<a
+          </div>
+
+          <div class="frame frame4">
+            <div class="frame3-text">
+              Interested in making 'HackOnHills' a huge success.<br />
+              Come join us by sponsoring us.
+              <!--Check the &nbsp;<a
               href="./pdf/sponsorship-brochure.pdf"
               target="__blank"
               >Sponsorship Brochure</a
             >&nbsp; for more details.-->
-          </div>
+            </div>
           </div>
         </div>
       </div>
@@ -2434,27 +2451,46 @@
 
       <div class="frame framen">
         <div class="framen-text">
-        
-            <h2>Contact Us</h2>
-            <p>Have any questions? Feel free to reach out to us!</p>
-  
-            <form id="contactForm">
-              <input placeholder="email" type="email" id="email" required />
-              <textarea placeholder="message" id="message" required></textarea>
-              <button type="submit">Send Message</button>
-            </form>
-            <div id="messageStatus" class="message-status"></div>
-          </div>
-        
+          <h2>Contact Us</h2>
+          <p>Have any questions? Feel free to reach out to us!</p>
+
+          <form id="contactForm">
+            <input placeholder="Email" type="email" id="email" required />
+            <textarea placeholder="Message" id="message" required></textarea>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60px; width: 100%;"> 
+    <button 
+        style="margin: 0; height: auto; background: transparent; padding: 0; border: none; cursor: pointer; --border-right: 4px; --text-stroke-color: rgba(255,255,255,0.6); --animation-color: #37FF8B; --fs-size: 1.5em; letter-spacing: 2px; text-decoration: none; font-size: var(--fs-size); font-family: 'Arial'; position: relative; text-transform: uppercase; color: transparent; -webkit-text-stroke: 1px var(--text-stroke-color); display: flex; align-items: center; gap: 8px;"
+        onmouseover="this.children[1].style.width='100%'; this.children[1].style.filter='drop-shadow(0 0 10px var(--animation-color))';"
+        onmouseout="this.children[1].style.width='0%'; this.children[1].style.filter='none';"
+    >
+        <span style="display: flex; align-items: center; gap: 8px; position: relative; margin-left: 23px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
+            </svg>
+            Send Message
+        </span>
+    
+        <span style="display: flex; align-items: center; gap: 8px; position: absolute; box-sizing: border-box; color: var(--animation-color); width: 0%; inset: 0; border-right: var(--border-right) solid var(--animation-color); overflow: hidden; transition: 0.4s; -webkit-text-stroke: 1px var(--animation-color); margin-left: 23px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
+            </svg>
+            Send Message
+        </span>
+    </button>
+</div>
+     
+          
+          </form>
+          <div id="messageStatus" class="message-status"></div>
+        </div>
       </div>
-      
-        
+
       <div class="frame frame6">
         <div class="footer-icons">
           <a href="https://github.com/appteam-nith/" target="__blank"
             ><img src="./images/github.svg"
           /></a>
-          
+
           <a href="https://www.instagram.com/hackonhills/" target="__blank"
             ><img src="./images/insta.svg"
           /></a>
@@ -2463,9 +2499,14 @@
           /></a>
         </div>
         <div class="footer-text">&copy; 2025 Team Hack on Hills</div>
-        Organised by <a href="https://www.instagram.com/appteam_nith/" target="_blank" class="footer-link">
+        Organised by
+        <a
+          href="https://www.instagram.com/appteam_nith/"
+          target="_blank"
+          class="footer-link"
+        >
           <img src="./images/images/appteam.png" />
-      </a>
+        </a>
       </div>
     </div>
     <script src="./js/menu.js"></script>
@@ -2477,7 +2518,11 @@
     <script type="module">
       // Import Firebase SDK
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+      } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
 
       // Firebase configuration
       const firebaseConfig = {
@@ -2487,43 +2532,48 @@
         storageBucket: "hackonhills-710a6.firebasestorage.app",
         messagingSenderId: "507755628378",
         appId: "1:507755628378:web:1323234ec328be724fd563",
-        measurementId: "G-40ZMCEG4Q6"
+        measurementId: "G-40ZMCEG4Q6",
       };
 
       // Initialize Firebase and Firestore
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
 
-      document.getElementById("contactForm").addEventListener("submit", async function (event) {
-        event.preventDefault();
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
 
-        // Get form data
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
+          // Get form data
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
 
-        if (email && message) {
-          try {
-            // Add data to Firestore
-            await addDoc(collection(db, "contactMessages"), {
-              email: email,
-              message: message,
-              timestamp: new Date()
-            });
+          if (email && message) {
+            try {
+              // Add data to Firestore
+              await addDoc(collection(db, "contactMessages"), {
+                email: email,
+                message: message,
+                timestamp: new Date(),
+              });
 
-            // Display success message
-            document.getElementById("messageStatus").innerHTML = "<p style='color:green;'>Your message has been sent successfully! We'll get back to you soon.</p>";
+              // Display success message
+              document.getElementById("messageStatus").innerHTML =
+                "<p style='color:green;'>Your message has been sent successfully! We'll get back to you soon.</p>";
 
-            // Clear the form
-            document.getElementById("contactForm").reset();
-          } catch (error) {
-            // Display error message if something goes wrong
-            document.getElementById("messageStatus").innerHTML = "<p style='color:red;'>There was an error sending your message. Please try again later.</p>";
+              // Clear the form
+              document.getElementById("contactForm").reset();
+            } catch (error) {
+              // Display error message if something goes wrong
+              document.getElementById("messageStatus").innerHTML =
+                "<p style='color:red;'>There was an error sending your message. Please try again later.</p>";
+            }
+          } else {
+            // Display error message if fields are empty
+            document.getElementById("messageStatus").innerHTML =
+              "<p style='color:red;'>Please fill in all the fields before submitting.</p>";
           }
-        } else {
-          // Display error message if fields are empty
-          document.getElementById("messageStatus").innerHTML = "<p style='color:red;'>Please fill in all the fields before submitting.</p>";
-        }
-      });
+        });
     </script>
   </body>
 </html>
