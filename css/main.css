@@ -526,13 +526,36 @@ right: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
+.frame3-text1 {
+  color: #10333c;
+  font-family: "Lilita One";
+  font-size: 1.5em;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
 
+.frame3-text1 a{
+  text-decoration: none;
+  color: #10333c;
+}
+.frame3-text1 a:hover{
+  text-decoration: none;
+  color: #ffffff;
+}
 .frame3-text:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: #10333c;
   transform: scale(1.05);
 }
-  
+.frame3-text1:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  transform: scale(1.05);
+}
 
 
 .frame3 .rotated {
@@ -839,4 +862,66 @@ right: auto;
   font-family: "primetime";
   color: #669999;
   font-weight: bold;
+}
+
+
+
+
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Lilita One";
+  width: 70%;
+  margin-left: 15%;
+
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #10333c;
+  transform: scale(1.05);
+}
+
+.frame1-text1 {
+  color: white;
+  font-family: "Didact Gothic";
+  font-size: 1.1em;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+
 }
