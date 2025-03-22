@@ -51,6 +51,7 @@ left: 0px;
     font-weight: 600;
     padding: 12px 20px;
     text-align: center; 
+    margin-left: 20px;
 }
 
 #devfolio-apply-now:not([disabled]) {
@@ -699,6 +700,13 @@ right: auto;
 }
 .sponsor-icons h1{
   font-size: 2rem; 
+    font-weight: bold;
+    text-align: center;
+    color: #333; 
+    margin-bottom: 20px;
+}
+.sponsor-icons h2{
+  font-size: 1.7rem; 
     font-weight: bold;
     text-align: center;
     color: #333; 
