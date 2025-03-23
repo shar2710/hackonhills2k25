@@ -553,12 +553,51 @@ right: auto;
     transition: all 0.3s ease-in-out;  
     
 }
-.framen-text h2{
+
+/* Keyframes for typing effect */
+.framen-text h2 {
   font-size: 2.5em;
   padding: 5px;
   font-weight: bold;
-  
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid rgba(255, 255, 255, 0.75); /* Simulate the cursor */
+  width: 0; /* Start with no width */
+  animation: typing 4s steps(12, end) infinite, blink 0.7s step-end infinite; /* Typing and cursor blinking */
 }
+
+/* Keyframes for typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Keyframes for backspacing effect */
+@keyframes backspace {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* Keyframes for cursor blinking */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
 .frame3-text {
   color: #ffffff;
   
@@ -568,7 +607,12 @@ right: auto;
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  
 }
+
+
+
+
 .frame3-text1 {
   color: #10333c;
  

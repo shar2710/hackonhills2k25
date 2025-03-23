@@ -2451,7 +2451,7 @@
 
       <div class="frame framen">
         <div class="framen-text">
-          <h2>Contact Us</h2>
+          <h2></h2>
           <p>Have any questions? Feel free to reach out to us!!</p>
 
           <form id="contactForm">
@@ -2464,7 +2464,7 @@
         onmouseout="this.children[1].style.width='0%'; this.children[1].style.filter='none';"
     >
         <span style="display: flex; align-items: center; gap: 8px; position: relative; margin-left: 23px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
             </svg>
             Send Message
@@ -2478,6 +2478,42 @@
         </span>
     </button>
 </div>
+
+<!-- Add the media query to adjust the button on smaller screens -->
+<style>
+@media (max-width: 768px) {
+    button {
+        --fs-size: 1.2em; /* Decrease font size on smaller screens */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    button span {
+        margin-left: 10px; /* Adjust space between text and icon */
+    }
+
+    svg {
+        width: 20px; /* Decrease icon size */
+        height: 12px; /* Decrease icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        --fs-size: 1em; /* Further decrease font size on very small screens */
+        padding: 8px; /* Adjust padding */
+    }
+
+    button span {
+        margin-left: 8px; /* Decrease the space between text and icon */
+    }
+
+    svg {
+        width: 18px; /* Further decrease icon size */
+        height: 10px; /* Further decrease icon size */
+    }
+}
+</style>
+
      
           
           </form>
@@ -2576,5 +2612,36 @@
         });
     </script>
     <script src="./js/type.js"></script>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const text = "Contact Us"; // Text to type
+        const speed = 150; // Typing speed in milliseconds
+        const backSpeed = 100; // Backspacing speed
+        const delay = 1000; // Delay before backspacing
+        let index = 0;
+        let isDeleting = false;
+        const textElement = document.querySelector(".framen-text h2");
+    
+        function typeAndBackspace() {
+          if (!isDeleting && index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeAndBackspace, speed);
+          } else if (isDeleting && index > 0) {
+            textElement.innerHTML = text.substring(0, index - 1);
+            index--;
+            setTimeout(typeAndBackspace, backSpeed);
+          } else {
+            isDeleting = !isDeleting; // Toggle deleting state
+            setTimeout(typeAndBackspace, delay); // Pause before switching
+          }
+        }
+    
+        typeAndBackspace(); // Start the typing and backspacing effect
+      });
+    </script>
+    
+    
   </body>
 </html>
