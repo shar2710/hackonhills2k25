@@ -321,11 +321,6 @@ right: auto;
   overflow: hidden;
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 
 
 
@@ -392,7 +387,14 @@ right: auto;
 }
 
 .top-schedule svg {
-  height: 200px;
+  min-height: 200px;
+  width: 50%;
+
+}
+@media (max-width: 748px) {
+  .top-schedule svg {
+    width: 40%;
+  }
 }
 
 .top-schedule-content.register svg path {
