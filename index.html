@@ -2613,35 +2613,34 @@
     </script>
     <script src="./js/type.js"></script>
     
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const text = "Contact Us"; // Text to type
-        const speed = 150; // Typing speed in milliseconds
-        const backSpeed = 100; // Backspacing speed
-        const delay = 1000; // Delay before backspacing
-        let index = 0;
-        let isDeleting = false;
-        const textElement = document.querySelector(".framen-text h2");
-    
-        function typeAndBackspace() {
-          if (!isDeleting && index < text.length) {
-            textElement.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeAndBackspace, speed);
-          } else if (isDeleting && index > 0) {
-            textElement.innerHTML = text.substring(0, index - 1);
-            index--;
-            setTimeout(typeAndBackspace, backSpeed);
-          } else {
-            isDeleting = !isDeleting; // Toggle deleting state
-            setTimeout(typeAndBackspace, delay); // Pause before switching
-          }
-        }
-    
-        typeAndBackspace(); // Start the typing and backspacing effect
-      });
-    </script>
-    
+   <script>document.addEventListener("DOMContentLoaded", function () {
+    const text = "Contact Us"; // Text to type
+    const speed = 150; // Typing speed
+    const backSpeed = 100; // Backspacing speed
+    const delay = 1000; // Delay before backspacing
+    let index = 0;
+    let isDeleting = false;
+    const dateElement = document.querySelector(".framen-text h2");
+  
+    function typeEffect() {
+      if (!isDeleting && index < text.length) {
+        dateElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, speed);
+      } else if (isDeleting && index > 0) {
+        dateElement.innerHTML = text.substring(0, index - 1);
+        index--;
+        setTimeout(typeEffect, backSpeed);
+      } else {
+        isDeleting = !isDeleting; // Toggle deleting state
+        setTimeout(typeEffect, delay); // Pause before switching
+      }
+    }
+  
+    typeEffect(); // Start the loop
+  });
+  </script>
+
     
   </body>
 </html>
