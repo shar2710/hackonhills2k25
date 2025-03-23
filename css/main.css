@@ -1,3 +1,10 @@
+@import "https://fonts.googleapis.com/css?family=Didact+Gothic|Prompt|Roboto|Roboto+Slab|Satisfy|Shadows+Into+Light|Source+Sans+Pro|Titillium+Web|Ubuntu|Varela+Round|Tektur|Yanone+Kaffeesatz|Zilla+Slab:700";
+
+
+* {
+  font-family: "Tektur";
+}
+
 div,
 body,
 ul,
@@ -50,6 +57,7 @@ left: 0px;
     font-size: 18px;
     font-weight: 600;
     padding: 12px 20px;
+    margin-bottom: 70px;
     text-align: center; 
     margin-left: 20px;
 }
@@ -76,7 +84,7 @@ left: 0px;
   padding: 15px 30px;
   color: #1b5664;
   cursor: pointer;
-  font-family: "Didact Gothic";
+  
   font-size: 1.2em;
   border-top: 1px solid rgba(23, 72, 84, 0.1);
   background-color: rgba(211, 220, 223, 1);
@@ -203,6 +211,7 @@ left: 0px;
   text-align: center;
   position: relative;
   top: 20px;
+ 
   display: block;
   z-index: 6;
 }
@@ -293,7 +302,7 @@ right: auto;
 
 .frame1-text {
   color: white;
-  font-family: "Didact Gothic";
+
   font-size: 1.1em;
   position: absolute;
   bottom: 100px;
@@ -301,13 +310,23 @@ right: auto;
   text-align: center;
 
 }
-
 .frame1-text .date {
-  display: block;
-  font-size: 1.5em;
+  font-size: 2.5em;
   padding: 5px;
   font-weight: bold;
+  border-right: 2px solid black; /* Cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
 }
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
 
 
 .frame2 {
@@ -439,7 +458,7 @@ right: auto;
 .divider-left {
   display: inline-block;
   color: white;
-  font-family: "Didact Gothic";
+
   margin-left: 20px;
   position: absolute;
   left: 0px;
@@ -453,7 +472,7 @@ right: auto;
 .divider-right {
   display: inline-block;
   color: white;
-  font-family: "Didact Gothic";
+ 
   margin-left: 20px;
   position: absolute;
   right: 0px;
@@ -482,7 +501,7 @@ right: auto;
   display: inline-block;
   min-height: 50%;
   color: white;
-  font-family: "Didact Gothic";
+
   text-align: center;
   padding: 2% 10px;
 }
@@ -521,7 +540,7 @@ right: auto;
   background-color: #174854;
   min-height: 80%;
   padding: 75px 0px;  
-  font-family: 'Didact Gothic';
+ 
   
 }
 .framen-text {
@@ -542,7 +561,7 @@ right: auto;
 }
 .frame3-text {
   color: #ffffff;
-  font-family: "Didact Gothic";
+  
   font-size: 1.5em;
   text-align: center;
   padding: 20px;
@@ -552,7 +571,7 @@ right: auto;
 }
 .frame3-text1 {
   color: #10333c;
-  font-family: "Didact Gothic";
+ 
   font-size: 1.5em;
   text-align: center;
   padding: 20px;
@@ -662,7 +681,7 @@ right: auto;
   padding: 30px 0px 100px 0px;
   background-color: #10333c;
   color: white;
-  font-family: "Didact Gothic";
+  
   text-align: center;
 }
 
@@ -763,7 +782,7 @@ right: auto;
 
 .frame5-content h1 {
   color: white;
-  font-family: "Didact Gothic";
+ 
 }
 
 .frame5-content {
@@ -777,7 +796,7 @@ right: auto;
   display: inline-block;
   color: white;
   width: 80%;
-  font-family: "Didact Gothic";
+  
   margin-bottom: 25px;
 }
 
@@ -798,7 +817,7 @@ right: auto;
   width: 100%;
   background-color: #051114;
   color: white;
-  font-family: "Didact Gothic";
+  
   text-align: center;
   padding: 10px 0px;
 }
@@ -810,6 +829,7 @@ right: auto;
 .footer-icons {
   padding: 5px;
 }
+
 
 
 .footer-text {
@@ -838,7 +858,7 @@ right: auto;
 }
 
 .frame4 .name {
-  font-family: primetime;
+ 
   color: white;
   font-size: 2em;
   margin-bottom: 30px;
@@ -890,7 +910,7 @@ right: auto;
 .frame4 .track-name {
   font-size: 1.1em;
   padding: 20px 0px;
-  font-family: "primetime";
+
   color: #669999;
   font-weight: bold;
 }
@@ -918,14 +938,14 @@ input, textarea {
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: "Didact Gothic";
+  
 }
 
 button {
   margin-top: 20px;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Didact Gothic";
+ 
   width: 70%;
   margin-left: 15%;
 
@@ -946,7 +966,7 @@ button:hover {
 
 .frame1-text1 {
   color: white;
-  font-family: "Didact Gothic";
+ 
   font-size: 1.1em;
   position: absolute;
   bottom: 100px;
