@@ -189,7 +189,7 @@ left: 0px;
 }
 
 .frame1 {
-  background-color: rgba(213, 246, 255, 1);
+  background-color: #211c3a;
   height: 100%;
 }
 
@@ -316,7 +316,7 @@ right: auto;
   font-size: 2.5em;
   padding: 5px;
   font-weight: bold;
-  border-right: 2px solid black; /* Cursor effect */
+ 
   white-space: nowrap;
   overflow: hidden;
 }
@@ -327,7 +327,7 @@ right: auto;
 
 
 .frame2 {
-  background-color: rgba(33, 103, 120, 1);
+  background-color: #2E236C;
   min-height: 60%;
   padding-bottom: 50px;
 }
@@ -352,15 +352,15 @@ right: auto;
 }
 
 .frame2 .rotated {
-  background-color: rgba(33, 103, 120, 1);
+  background-color: #17153B;
 }
 
 .frame2 .rotated2 {
-  background-color: rgba(33, 103, 120, 1);
+  background-color: #17153B;
 }
 
 .schedule {
-  background-color: rgba(33, 103, 120, 1);
+  background-color: #2E236C;
   width: 100%;
   min-height: 100%;
   position: relative;
@@ -536,12 +536,12 @@ right: auto;
 }
 
 .frame3 {
-  background-color: #174854;
+  background-color: #17153B;
   padding: 75px 0px;
   min-height: 100%;
 }
 .framen {
-  background-color: #174854;
+  background-color: #17153B;
   min-height: 80%;
   padding: 75px 0px;  
  
@@ -607,11 +607,12 @@ right: auto;
   
   font-size: 1.5em;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  
+  margin-top: 0px;
+ 
 }
 
 
@@ -727,19 +728,19 @@ right: auto;
 .frame4 {
   height: auto;
   padding: 30px 0px 100px 0px;
-  background-color: #10333c;
+  background-color: #2E236C;
   color: white;
   
   text-align: center;
 }
 
 .frame4 .rotated {
-  background-color: #10333c;
+  background-color: #2E236C;
   z-index: 2;
 }
 
 .frame4 .rotated2 {
-  background-color: #10333c;
+  background-color: #2E236C;
   z-index: 2;
 }
 
@@ -814,17 +815,17 @@ right: auto;
 
 .frame5 {
   width: 100%;
-  background-color: #0a2329;
+  background-color: #2E236C;
   padding: 50px 0px;
 }
 
 .frame5 .rotated {
-  background-color: #0a2329;
+  background-color: #2E236C;
   z-index: 2;
 }
 
 .frame5 .rotated2 {
-  background-color: #0a2329;
+  background-color: #2E236C;
   z-index: 2;
 }
 
