@@ -821,6 +821,13 @@ right: auto;
     color: #333; 
     margin-bottom: 20px;
 }
+.sponsor-icons h3{
+  font-size: 1.5rem; 
+    font-weight: bold;
+    text-align: center;
+    color: #333; 
+    margin-bottom: 20px;
+}
 
 .sponsor-icons .sponsor-icon.rawIcon img {
   width: 40%;
