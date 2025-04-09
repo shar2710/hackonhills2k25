@@ -1,43 +1,48 @@
-const carousel = document.querySelector(".frame3 .gallery .carousel");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
 
 let currentIndex = 0;
 
-prevBtn.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateCarousel();
-  }
-});
-
-nextBtn.addEventListener("click", () => {
-  if (currentIndex < carousel.children.length - 1) {
-    currentIndex++;
-    updateCarousel();
-  }
-});
-
 function updateCarousel() {
-  const width = carousel.children[0].clientWidth;
-  const carouselWidth = carousel.clientWidth;
-  const offset = (carouselWidth - width) / 2;
-  carousel.style.transform = `translateX(-${currentIndex * (width + 30) - offset}px)`; // Adjusted for margin and centering
-
-  // Remove active class from all images
-  Array.from(carousel.children).forEach((img) =>
-    img.classList.remove("active")
-  );
-
-  // Add active class to the current image
-  carousel.children[currentIndex].classList.add("active");
+  const slideWidth = slides[0].getBoundingClientRect().width + 20;
+  const containerWidth = track.parentElement.offsetWidth;
+  const offset = slideWidth * currentIndex - (containerWidth - slideWidth) / 2;
+  track.style.transform = `translateX(-${offset}px)`;
 }
 
-carousel.children[currentIndex].classList.add("active");
-
-function autoSlide() {
-  currentIndex = (currentIndex + 1) % carousel.children.length;
+function goToNext() {
+  currentIndex = (currentIndex + 1) % slides.length;
   updateCarousel();
 }
 
-setInterval(autoSlide, 3000); 
+function goToPrev() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel();
+}
+
+nextBtn.addEventListener('click', () => {
+  goToNext();
+  resetAutoplay();
+});
+
+prevBtn.addEventListener('click', () => {
+  goToPrev();
+  resetAutoplay();
+});
+
+function resetAutoplay() {
+  clearInterval(autoPlay);
+  autoPlay = setInterval(goToNext, 2500);
+}
+
+let autoPlay = setInterval(goToNext, 2500);
+
+window.addEventListener('load', () => {
+  updateCarousel();
+});
+
+window.addEventListener('resize', () => {
+  updateCarousel();
+});

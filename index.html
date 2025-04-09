@@ -28,6 +28,11 @@
       href="./images/new_logo.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
     <link
@@ -837,9 +842,7 @@
         </div>
       </div>
       <div class="frame frame2">
-        
         <div class="schedule">
-          
           <div class="top-schedule">
             <div class="top-schedule-content register">
               <?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Created with Inkscape (http://www.inkscape.org/) --><svg
@@ -2238,18 +2241,15 @@
           <div class="bottom-schedule">
             <div class="bottom-schedule-content">
               <h2>Registration Phase</h2>
-            
             </div>
             <div class="bottom-schedule-content">
               <h2>Pre Hackathon Meeting <br /></h2>
-             
             </div>
             <div class="bottom-schedule-content">
               <h2>Coding Phase <br /></h2>
               <div class="schedule-content">
                 <h3>Eat! Sleep! Code! Repeat!</h3>
               </div>
-              
             </div>
             <div class="bottom-schedule-content">
               <h2>Prize Distribution <br /></h2>
@@ -2259,412 +2259,743 @@
       </div>
 
       <div class="frame frame3">
-       
         <div class="gallery">
-          <div class="carousel">
-            <img src="./images/Gallery/11.jpg" />
-            <img src="./images/Gallery/10.jpg" />
-            <img src="./images/Gallery/7.jpg" />
-            <img src="./images/Gallery/5.jpg" />
-            <img src="./images/Gallery/8.jpg" />
-            <img src="./images/Gallery/4.jpg" />
-            <img src="./images/Gallery/6.jpg" />
-          </div>
-          <div class="carousel-controls">
-            <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-            <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+          <div class="carousel-container">
+            <div class="carousel-main">
+              <div class="carousel-track">
+                <img src="./images/Gallery/11.jpg" />
+                <img src="./images/Gallery/10.jpg" />
+                <img src="./images/Gallery/7.jpg" />
+                <img src="./images/Gallery/5.jpg" />
+                <img src="./images/Gallery/8.jpg" />
+                <img src="./images/Gallery/4.jpg" />
+                <img src="./images/Gallery/6.jpg" />
+              </div>
+            </div>
+            <div class="carousel-thumbnails">
+              <div class="thumbnail" data-index="0">
+                <img src="./images/Gallery/11.jpg" />
+              </div>
+              <div class="thumbnail" data-index="1">
+                <img src="./images/Gallery/10.jpg" />
+              </div>
+              <div class="thumbnail" data-index="2">
+                <img src="./images/Gallery/7.jpg" />
+              </div>
+              <div class="thumbnail" data-index="3">
+                <img src="./images/Gallery/5.jpg" />
+              </div>
+              <div class="thumbnail" data-index="4">
+                <img src="./images/Gallery/8.jpg" />
+              </div>
+              <div class="thumbnail" data-index="5">
+                <img src="./images/Gallery/4.jpg" />
+              </div>
+              <div class="thumbnail" data-index="6">
+                <img src="./images/Gallery/6.jpg" />
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button id="prevBtn" class="arrow">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button id="nextBtn" class="arrow">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      
+
+      <style>
+        .gallery {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 40px 0;
+        }
+
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .carousel-main {
+          width: 100%;
+          height: 500px;
+          overflow: hidden;
+          position: relative;
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .carousel-track {
+          display: flex;
+          transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+          height: 100%;
+        }
+
+        .carousel-track img {
+          min-width: 100%;
+          height: 100%;
+          object-fit: cover;
+          flex-shrink: 0;
+        }
+
+        .carousel-thumbnails {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          width: 100%;
+          overflow-x: auto;
+          padding: 10px 0;
+          scrollbar-width: thin;
+        }
+
+        .thumbnail {
+          width: 80px;
+          height: 60px;
+          border-radius: 8px;
+          overflow: hidden;
+          cursor: pointer;
+          opacity: 0.6;
+          transition: all 0.3s ease;
+          border: 2px solid transparent;
+          flex-shrink: 0;
+        }
+
+        .thumbnail:hover {
+          opacity: 0.8;
+        }
+
+        .thumbnail.active {
+          opacity: 1;
+          border-color: #3770ff;
+          box-shadow: 0 0 15px rgba(55, 112, 255, 0.6);
+        }
+
+        .thumbnail img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .carousel-controls {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          transform: translateY(-50%);
+          padding: 0 20px;
+          pointer-events: none;
+          z-index: 10;
+        }
+
+        .carousel-controls .arrow {
+          pointer-events: auto;
+          background-color: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(5px);
+          border: none;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+
+        .carousel-controls .arrow:hover {
+          background-color: rgba(0, 0, 0, 0.7);
+          transform: scale(1.1);
+        }
+
+        .frame3 .gallery {
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+          overflow: hidden;
+          position: relative;
+          left: 0;
+        }
+
+        @media (max-width: 768px) {
+          .carousel-main {
+            height: 350px;
+          }
+
+          .thumbnail {
+            width: 60px;
+            height: 45px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .carousel-main {
+            height: 250px;
+          }
+
+          .thumbnail {
+            width: 50px;
+            height: 40px;
+          }
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const track = document.querySelector(".carousel-track");
+          const images = Array.from(track.querySelectorAll("img"));
+          const thumbnails = document.querySelectorAll(".thumbnail");
+          const prevBtn = document.getElementById("prevBtn");
+          const nextBtn = document.getElementById("nextBtn");
+
+          let currentIndex = 0;
+          const totalImages = images.length;
+
+          updateCarousel();
+
+          thumbnails.forEach((thumb, index) => {
+            thumb.addEventListener("click", () => {
+              currentIndex = index;
+              updateCarousel();
+            });
+          });
+
+          prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+          });
+
+          nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+          });
+
+          function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            thumbnails.forEach((thumb, idx) => {
+              thumb.classList.toggle("active", idx === currentIndex);
+            });
+          }
+
+          let autoRotate = setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+          }, 5000);
+
+          const carousel = document.querySelector(".carousel-container");
+          carousel.addEventListener("mouseenter", () => {
+            clearInterval(autoRotate);
+          });
+
+          carousel.addEventListener("mouseleave", () => {
+            autoRotate = setInterval(() => {
+              currentIndex = (currentIndex + 1) % totalImages;
+              updateCarousel();
+            }, 5000);
+          });
+
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") {
+              currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+              updateCarousel();
+            } else if (e.key === "ArrowRight") {
+              currentIndex = (currentIndex + 1) % totalImages;
+              updateCarousel();
+            }
+          });
+        });
+      </script>
+
       <div class="frame frame-timeline">
         <div class="frame-timeline-content">
           <h1>Event Timeline</h1>
           <div class="timeline">
             <div class="outer">
-      
               <div class="card heading-card">
                 <div class="info">
                   <h3 class="title">DAY 1 - 11th April 2025</h3>
-                  <p>Kickstart Hack on Hills 6.0 with exciting events and the Nimbus Pre-Launch!</p>
+                  <p>
+                    Kickstart Hack on Hills 6.0 with exciting events and the
+                    Nimbus Pre-Launch!
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Opening (With Nimbus Pre-Launch)</h3>
-                  <p>Join us for the grand opening ceremony that also marks the Nimbus Pre-Launch event.</p>
+                  <p>
+                    Join us for the grand opening ceremony that also marks the
+                    Nimbus Pre-Launch event.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Offline Check-ins [10AM - 3PM]</h3>
-                  <p>Participants must complete registration at the venue during this window.</p>
+                  <p>
+                    Participants must complete registration at the venue during
+                    this window.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Hacking Starts [2PM onwards]</h3>
-                  <p>Get your laptops ready — the hackathon officially kicks off!</p>
+                  <p>
+                    Get your laptops ready — the hackathon officially kicks off!
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Endless Domains Talk [4PM]</h3>
-                  <p>Explore various domains through this interactive tech session.</p>
+                  <p>
+                    Explore various domains through this interactive tech
+                    session.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Mentoring [6PM - 10PM]</h3>
-                  <p>Get guidance from industry experts to elevate your projects.</p>
+                  <p>
+                    Get guidance from industry experts to elevate your projects.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Wrap Up [11PM - 12AM]</h3>
-                  <p>End the day with insights, progress, and late-night collaboration.</p>
+                  <p>
+                    End the day with insights, progress, and late-night
+                    collaboration.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card heading-card">
                 <div class="info">
                   <h3 class="title">DAY 2 - 12th April 2025</h3>
-                  <p>Keep the momentum going with evaluations, mentoring, and open judging!</p>
+                  <p>
+                    Keep the momentum going with evaluations, mentoring, and
+                    open judging!
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Start [4AM onwards]</h3>
-                  <p>Early birds can begin enhancing and refining their hacks.</p>
+                  <p>
+                    Early birds can begin enhancing and refining their hacks.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Evaluation I [10AM - 1PM]</h3>
-                  <p>Initial round of judging begins. Be ready to showcase progress.</p>
+                  <p>
+                    Initial round of judging begins. Be ready to showcase
+                    progress.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Mentoring [6PM - 10PM]</h3>
                   <p>Refine your approach with expert advice and feedback.</p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
-                  <h3 class="title">Parallel Open Exhibition Judging [6PM - 10PM]</h3>
-                  <p>Showcase your projects to the wider audience and judges in parallel sessions.</p>
+                  <h3 class="title">
+                    Parallel Open Exhibition Judging [6PM - 10PM]
+                  </h3>
+                  <p>
+                    Showcase your projects to the wider audience and judges in
+                    parallel sessions.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Wrap Up [11PM - 12AM]</h3>
-                  <p>Recap the day, discuss progress, and prepare for the final push.</p>
+                  <p>
+                    Recap the day, discuss progress, and prepare for the final
+                    push.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card heading-card">
                 <div class="info">
                   <h3 class="title">DAY 3 - 13th April 2025</h3>
-                  <p>The grand finale: make your final presentations and await the results!</p>
+                  <p>
+                    The grand finale: make your final presentations and await
+                    the results!
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Submission By [9:30AM sharp]</h3>
-                  <p>Ensure your code and presentations are submitted on time.</p>
+                  <p>
+                    Ensure your code and presentations are submitted on time.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
-                  <h3 class="title">Judging/Presentation [10AM - 1PM, 2PM - 3PM]</h3>
+                  <h3 class="title">
+                    Judging/Presentation [10AM - 1PM, 2PM - 3PM]
+                  </h3>
                   <p>Present your work to the panel of esteemed judges.</p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Evaluation [3PM - 4PM]</h3>
-                  <p>Final evaluation of top teams based on creativity, impact, and execution.</p>
+                  <p>
+                    Final evaluation of top teams based on creativity, impact,
+                    and execution.
+                  </p>
                 </div>
               </div>
-      
+
               <div class="card">
                 <div class="info">
                   <h3 class="title">Results and Closing [4PM - 6PM]</h3>
-                  <p>Celebrate the end of an incredible hackathon journey and meet the winners!</p>
+                  <p>
+                    Celebrate the end of an incredible hackathon journey and
+                    meet the winners!
+                  </p>
                 </div>
               </div>
-      
             </div>
           </div>
         </div>
       </div>
 
-
-<style>
-   .card.heading-card {
-        float: none !important;
-        width: 60% !important;
-        margin: 40px auto !important;
-        text-align: center !important;
-        transform: scale(1.03);
-      }
-      
-      .card.heading-card::before {
-        display: none;
-      }
-      
-      @media (max-width: 900px) {
+      <style>
         .card.heading-card {
-          width: 90% !important;
+          float: none !important;
+          width: 60% !important;
+          margin: 40px auto !important;
+          text-align: center !important;
+          transform: scale(1.03);
         }
-      }
 
-.frame-timeline {
-  background-color: #2E236C;
-  padding: 70px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.frame-timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(125deg, rgba(0, 209, 255, 0.03) 25%, transparent 25%) 0 0,
-              linear-gradient(225deg, rgba(0, 209, 255, 0.03) 25%, transparent 25%) 0 0;
-  background-size: 60px 60px;
-  opacity: 0.4;
-  animation: gradientShift 30s linear infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0 0; }
-  100% { background-position: 60px 60px; }
-}
-
-.frame-timeline-content {
-  position: relative;
-  text-align: center;
-  color: #FFFFFF;
-  z-index: 2;
-}
-
-.frame-timeline-content h1 {
-  margin-bottom: 60px;
-  font-size: 3em;
-  font-weight: 700;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(0, 209, 255, 0.7), 0 0 20px rgba(0, 209, 255, 0.5);
-  animation: pulsateText 3s ease-in-out infinite;
-}
-
-@keyframes pulsateText {
-  0% { text-shadow: 0 0 10px rgba(0, 209, 255, 0.7), 0 0 20px rgba(0, 209, 255, 0.5); }
-  50% { text-shadow: 0 0 15px rgba(0, 209, 255, 0.9), 0 0 30px rgba(0, 209, 255, 0.7); }
-  100% { text-shadow: 0 0 10px rgba(0, 209, 255, 0.7), 0 0 20px rgba(0, 209, 255, 0.5); }
-}
-
-.timeline {
-  width: 85%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.timeline .outer {
-  padding: 20px 0;
-  position: relative;
-}
-
-.timeline .outer::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 209, 255, 0.3), #00D1FF, rgba(0, 209, 255, 0.3));
-  transform: translateX(-50%);
-  z-index: 1;
-  box-shadow: 0 0 15px rgba(0, 209, 255, 0.7);
-  animation: timelineGlow 4s ease-in-out infinite;
-}
-
-@keyframes timelineGlow {
-  0%, 100% { box-shadow: 0 0 15px rgba(0, 209, 255, 0.7); }
-  50% { box-shadow: 0 0 25px rgba(0, 209, 255, 1); }
-}
-
-.timeline .card {
-  position: relative;
-  width: 45%;
-  margin-bottom: 16px;
-  z-index: 2;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.timeline .card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-.timeline .card::before {
-  content: "";
-  position: absolute;
-  top: 25px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: white;
-  box-shadow: 0 0 0 4px rgba(0, 209, 255, 0.5), 0 0 15px rgba(0, 209, 255, 1);
-  z-index: 2;
-  transition: all 0.4s ease;
-}
-
-.timeline .card:hover::before {
-  background: #00D1FF;
-  transform: scale(1.2);
-  box-shadow: 0 0 0 4px rgba(0, 209, 255, 0.5), 0 0 20px rgba(0, 209, 255, 1);
-}
-
-.timeline .card:nth-child(odd) {
-  float: left;
-  clear: both;
-  text-align: right;
-  padding-right: 50px;
-}
-
-.timeline .card:nth-child(odd)::before {
-  right: -8px;
-}
-
-.timeline .card:nth-child(even) {
-  float: right;
-  clear: both;
-  text-align: left;
-  padding-left: 50px;
-}
-
-.timeline .card:nth-child(even)::before {
-  left: -8px;
-}
-
-.timeline .info {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  border-left: 4px solid #00D1FF;
-  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.timeline .info:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 209, 255, 0.3);
-  border-left: 4px solid white;
-}
-
-.timeline .title {
-  color: white;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: 0 0 5px rgba(0, 209, 255, 0.7);
-}
-
-.timeline .info p {
-  color: #E0E0FF;
-  font-size: 1em;
-  line-height: 1.7;
-  letter-spacing: 0.2px;
-}
-
-.timeline .outer::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.timeline .card:nth-child(1) { transition-delay: 0.1s; }
-.timeline .card:nth-child(2) { transition-delay: 0.3s; }
-.timeline .card:nth-child(3) { transition-delay: 0.5s; }
-.timeline .card:nth-child(4) { transition-delay: 0.7s; }
-.timeline .card:nth-child(5) { transition-delay: 0.9s; }
-
-@media (max-width: 900px) {
-  .timeline .outer::before {
-    left: 20px;
-  }
-  
-  .timeline .card {
-    width: calc(100% - 70px);
-    margin-bottom: 40px;
-  }
-  
-  .timeline .card:nth-child(odd),
-  .timeline .card:nth-child(even) {
-    float: right;
-    clear: both;
-    text-align: left;
-    padding-left: 50px;
-  }
-  
-  .timeline .card:nth-child(odd)::before,
-  .timeline .card:nth-child(even)::before {
-    left: -10px;
-    right: auto !important;
-  }
-}
-
-.card.heading-card {
-  display: block;
-  float: none;
-  clear: both;
-}
-
-
-</style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll('.timeline .card');
-    
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+        .card.heading-card::before {
+          display: none;
         }
-      });
-    }, {
-      threshold: 0.1
-    });
-    
-    cards.forEach(card => observer.observe(card));
-  });</script>
 
+        @media (max-width: 900px) {
+          .card.heading-card {
+            width: 90% !important;
+          }
+        }
+
+        .frame-timeline {
+          background-color: #2e236c;
+          padding: 70px 20px;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .frame-timeline::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+                125deg,
+                rgba(0, 209, 255, 0.03) 25%,
+                transparent 25%
+              )
+              0 0,
+            linear-gradient(
+                225deg,
+                rgba(0, 209, 255, 0.03) 25%,
+                transparent 25%
+              )
+              0 0;
+          background-size: 60px 60px;
+          opacity: 0.4;
+          animation: gradientShift 30s linear infinite;
+        }
+
+        @keyframes gradientShift {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: 60px 60px;
+          }
+        }
+
+        .frame-timeline-content {
+          position: relative;
+          text-align: center;
+          color: #ffffff;
+          z-index: 2;
+        }
+
+        .frame-timeline-content h1 {
+          margin-bottom: 60px;
+          font-size: 3em;
+          font-weight: 700;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-shadow: 0 0 10px rgba(0, 209, 255, 0.7),
+            0 0 20px rgba(0, 209, 255, 0.5);
+          animation: pulsateText 3s ease-in-out infinite;
+        }
+
+        @keyframes pulsateText {
+          0% {
+            text-shadow: 0 0 10px rgba(0, 209, 255, 0.7),
+              0 0 20px rgba(0, 209, 255, 0.5);
+          }
+          50% {
+            text-shadow: 0 0 15px rgba(0, 209, 255, 0.9),
+              0 0 30px rgba(0, 209, 255, 0.7);
+          }
+          100% {
+            text-shadow: 0 0 10px rgba(0, 209, 255, 0.7),
+              0 0 20px rgba(0, 209, 255, 0.5);
+          }
+        }
+
+        .timeline {
+          width: 85%;
+          margin: 0 auto;
+          position: relative;
+        }
+
+        .timeline .outer {
+          padding: 20px 0;
+          position: relative;
+        }
+
+        .timeline .outer::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          width: 3px;
+          height: 100%;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 209, 255, 0.3),
+            #00d1ff,
+            rgba(0, 209, 255, 0.3)
+          );
+          transform: translateX(-50%);
+          z-index: 1;
+          box-shadow: 0 0 15px rgba(0, 209, 255, 0.7);
+          animation: timelineGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes timelineGlow {
+          0%,
+          100% {
+            box-shadow: 0 0 15px rgba(0, 209, 255, 0.7);
+          }
+          50% {
+            box-shadow: 0 0 25px rgba(0, 209, 255, 1);
+          }
+        }
+
+        .timeline .card {
+          position: relative;
+          width: 45%;
+          margin-bottom: 16px;
+          z-index: 2;
+          opacity: 0;
+          transform: translateY(30px);
+          transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .timeline .card.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .timeline .card::before {
+          content: "";
+          position: absolute;
+          top: 25px;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: white;
+          box-shadow: 0 0 0 4px rgba(0, 209, 255, 0.5),
+            0 0 15px rgba(0, 209, 255, 1);
+          z-index: 2;
+          transition: all 0.4s ease;
+        }
+
+        .timeline .card:hover::before {
+          background: #00d1ff;
+          transform: scale(1.2);
+          box-shadow: 0 0 0 4px rgba(0, 209, 255, 0.5),
+            0 0 20px rgba(0, 209, 255, 1);
+        }
+
+        .timeline .card:nth-child(odd) {
+          float: left;
+          clear: both;
+          text-align: right;
+          padding-right: 50px;
+        }
+
+        .timeline .card:nth-child(odd)::before {
+          right: -8px;
+        }
+
+        .timeline .card:nth-child(even) {
+          float: right;
+          clear: both;
+          text-align: left;
+          padding-left: 50px;
+        }
+
+        .timeline .card:nth-child(even)::before {
+          left: -8px;
+        }
+
+        .timeline .info {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(10px);
+          border-radius: 12px;
+          padding: 25px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+          border-left: 4px solid #00d1ff;
+          transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .timeline .info:hover {
+          transform: translateY(-8px) scale(1.02);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5),
+            0 0 20px rgba(0, 209, 255, 0.3);
+          border-left: 4px solid white;
+        }
+
+        .timeline .title {
+          color: white;
+          margin-bottom: 15px;
+          font-size: 1.5em;
+          font-weight: bold;
+          letter-spacing: 1px;
+          text-shadow: 0 0 5px rgba(0, 209, 255, 0.7);
+        }
+
+        .timeline .info p {
+          color: #e0e0ff;
+          font-size: 1em;
+          line-height: 1.7;
+          letter-spacing: 0.2px;
+        }
+
+        .timeline .outer::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .timeline .card:nth-child(1) {
+          transition-delay: 0.1s;
+        }
+        .timeline .card:nth-child(2) {
+          transition-delay: 0.3s;
+        }
+        .timeline .card:nth-child(3) {
+          transition-delay: 0.5s;
+        }
+        .timeline .card:nth-child(4) {
+          transition-delay: 0.7s;
+        }
+        .timeline .card:nth-child(5) {
+          transition-delay: 0.9s;
+        }
+
+        @media (max-width: 900px) {
+          .timeline .outer::before {
+            left: 20px;
+          }
+
+          .timeline .card {
+            width: calc(100% - 70px);
+            margin-bottom: 40px;
+          }
+
+          .timeline .card:nth-child(odd),
+          .timeline .card:nth-child(even) {
+            float: right;
+            clear: both;
+            text-align: left;
+            padding-left: 50px;
+          }
+
+          .timeline .card:nth-child(odd)::before,
+          .timeline .card:nth-child(even)::before {
+            left: -10px;
+            right: auto !important;
+          }
+        }
+
+        .card.heading-card {
+          display: block;
+          float: none;
+          clear: both;
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const cards = document.querySelectorAll(".timeline .card");
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                }
+              });
+            },
+            {
+              threshold: 0.1,
+            }
+          );
+
+          cards.forEach((card) => observer.observe(card));
+        });
+      </script>
 <div class="frame frame3">
         <div class="frame5-content">
           <h1>Prizes</h1>
@@ -2789,7 +3120,6 @@
               </div>
               <div class="track-name">General</div>
             </div>
-            
           </div>
 
           <div class="frame frame3">
@@ -2838,24 +3168,22 @@
                     <img
                       src="./images/Sponsors/endless.svg"
                       alt="ENDLESS DOMAINS LOGO"
-                      style="height: 50px "
+                      style="height: 50px"
                     />
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          
 
           <div class="frame frame4">
             <div class="frame3-text">
               Interested in making 'HackOnHills' a huge success.<br />
               Come join us by sponsoring us.
             </div>
-            </div>
           </div>
-        
         </div>
+      </div>
       <div class="frame frame5">
         <div class="rotated"></div>
         <div class="rotated2"></div>
@@ -2925,65 +3253,136 @@
           <form id="contactForm">
             <input placeholder="Email" type="email" id="email" required />
             <textarea placeholder="Message" id="message" required></textarea>
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60px; width: 100%;"> 
-    <button 
-        style="margin: 0; height: auto; background: transparent; padding: 0; border: none; cursor: pointer; --border-right: 4px; --text-stroke-color: rgba(255,255,255,0.6); --animation-color: #37FF8B; --fs-size: 1.5em; letter-spacing: 2px; text-decoration: none; font-size: var(--fs-size); font-family: 'Arial'; position: relative; text-transform: uppercase; color: transparent; -webkit-text-stroke: 1px var(--text-stroke-color); display: flex; align-items: center; gap: 8px;"
-        onmouseover="this.children[1].style.width='100%'; this.children[1].style.filter='drop-shadow(0 0 10px var(--animation-color))';"
-        onmouseout="this.children[1].style.width='0%'; this.children[1].style.filter='none';"
-    >
-        <span style="display: flex; align-items: center; gap: 8px; position: relative; margin-left: 23px;">
-            <svg width="24" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
-            </svg>
-            Send Message
-        </span>
-    
-        <span style="display: flex; align-items: center; gap: 8px; position: absolute; box-sizing: border-box; color: var(--animation-color); width: 0%; inset: 0; border-right: var(--border-right) solid var(--animation-color); overflow: hidden; transition: 0.4s; -webkit-text-stroke: 1px var(--animation-color); margin-left: 23px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
-            </svg>
-            Send Message
-        </span>
-    </button>
-</div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 60px;
+                width: 100%;
+              "
+            >
+              <button
+                style="
+                  margin: 0;
+                  height: auto;
+                  background: transparent;
+                  padding: 0;
+                  border: none;
+                  cursor: pointer;
+                  --border-right: 4px;
+                  --text-stroke-color: rgba(255, 255, 255, 0.6);
+                  --animation-color: #37ff8b;
+                  --fs-size: 1.5em;
+                  letter-spacing: 2px;
+                  text-decoration: none;
+                  font-size: var(--fs-size);
+                  font-family: 'Arial';
+                  position: relative;
+                  text-transform: uppercase;
+                  color: transparent;
+                  -webkit-text-stroke: 1px var(--text-stroke-color);
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+                onmouseover="this.children[1].style.width='100%'; this.children[1].style.filter='drop-shadow(0 0 10px var(--animation-color))';"
+                onmouseout="this.children[1].style.width='0%'; this.children[1].style.filter='none';"
+              >
+                <span
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    position: relative;
+                    margin-left: 23px;
+                  "
+                >
+                  <svg
+                    width="24"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 21L23 12L2 3V10L17 12L2 14V21Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  Send Message
+                </span>
 
-<!-- Add the media query to adjust the button on smaller screens -->
-<style>
-@media (max-width: 768px) {
-    button {
-        --fs-size: 1.2em; /* Decrease font size on smaller screens */
-        padding: 10px; /* Adjust padding for mobile */
-    }
+                <span
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    position: absolute;
+                    box-sizing: border-box;
+                    color: var(--animation-color);
+                    width: 0%;
+                    inset: 0;
+                    border-right: var(--border-right) solid
+                      var(--animation-color);
+                    overflow: hidden;
+                    transition: 0.4s;
+                    -webkit-text-stroke: 1px var(--animation-color);
+                    margin-left: 23px;
+                  "
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 21L23 12L2 3V10L17 12L2 14V21Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  Send Message
+                </span>
+              </button>
+            </div>
 
-    button span {
-        margin-left: 10px; /* Adjust space between text and icon */
-    }
+            <!-- Add the media query to adjust the button on smaller screens -->
+            <style>
+              @media (max-width: 768px) {
+                button {
+                  --fs-size: 1.2em; /* Decrease font size on smaller screens */
+                  padding: 10px; /* Adjust padding for mobile */
+                }
 
-    svg {
-        width: 20px; /* Decrease icon size */
-        height: 12px; /* Decrease icon size */
-    }
-}
+                button span {
+                  margin-left: 10px; /* Adjust space between text and icon */
+                }
 
-@media (max-width: 480px) {
-    button {
-        --fs-size: 1em; /* Further decrease font size on very small screens */
-        padding: 8px; /* Adjust padding */
-    }
+                svg {
+                  width: 20px; /* Decrease icon size */
+                  height: 12px; /* Decrease icon size */
+                }
+              }
 
-    button span {
-        margin-left: 8px; /* Decrease the space between text and icon */
-    }
+              @media (max-width: 480px) {
+                button {
+                  --fs-size: 1em; /* Further decrease font size on very small screens */
+                  padding: 8px; /* Adjust padding */
+                }
 
-    svg {
-        width: 18px; /* Further decrease icon size */
-        height: 10px; /* Further decrease icon size */
-    }
-}
-</style>
+                button span {
+                  margin-left: 8px; /* Decrease the space between text and icon */
+                }
 
-     
-          
+                svg {
+                  width: 18px; /* Further decrease icon size */
+                  height: 10px; /* Further decrease icon size */
+                }
+              }
+            </style>
           </form>
           <div id="messageStatus" class="message-status"></div>
         </div>
@@ -3014,13 +3413,13 @@
       </div>
     </div>
     <script src="./js/menu.js"></script>
-  
+
     <script src="./js/schedule.js"></script>
     <script src="./js/carousel.js"></script>
     <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
     <script src="./js/button.js"></script>
     <script type="module">
-      // Import Firebase SDK
+     
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
       import {
         getFirestore,
@@ -3028,7 +3427,7 @@
         addDoc,
       } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
 
-      // Firebase configuration
+     
       const firebaseConfig = {
         apiKey: "AIzaSyAZVSOa17CtOlX68-ALnOmPvDJm3jy6M_0",
         authDomain: "hackonhills-710a6.firebaseapp.com",
@@ -3039,7 +3438,7 @@
         measurementId: "G-40ZMCEG4Q6",
       };
 
-      // Initialize Firebase and Firestore
+      
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
 
@@ -3048,68 +3447,67 @@
         .addEventListener("submit", async function (event) {
           event.preventDefault();
 
-          // Get form data
+          
           const email = document.getElementById("email").value;
           const message = document.getElementById("message").value;
 
           if (email && message) {
             try {
-              // Add data to Firestore
+             
               await addDoc(collection(db, "contactMessages"), {
                 email: email,
                 message: message,
                 timestamp: new Date(),
               });
 
-              // Display success message
+             
               document.getElementById("messageStatus").innerHTML =
                 "<p style='color:green;'>Your message has been sent successfully! We'll get back to you soon.</p>";
 
-              // Clear the form
+              
               document.getElementById("contactForm").reset();
             } catch (error) {
-              // Display error message if something goes wrong
+              
               document.getElementById("messageStatus").innerHTML =
                 "<p style='color:red;'>There was an error sending your message. Please try again later.</p>";
             }
           } else {
-            // Display error message if fields are empty
+           
             document.getElementById("messageStatus").innerHTML =
               "<p style='color:red;'>Please fill in all the fields before submitting.</p>";
           }
         });
     </script>
-   
-    
-   <script>document.addEventListener("DOMContentLoaded", function () {
-    const text = "Contact Us"; // Text to type
-    const speed = 150; // Typing speed
-    const backSpeed = 100; // Backspacing speed
-    const delay = 1000; // Delay before backspacing
-    let index = 0;
-    let isDeleting = false;
-    const dateElement = document.querySelector(".framen-text h2");
-  
-    function typeEffect() {
-      if (!isDeleting && index < text.length) {
-        dateElement.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, speed);
-      } else if (isDeleting && index > 0) {
-        dateElement.innerHTML = text.substring(0, index - 1);
-        index--;
-        setTimeout(typeEffect, backSpeed);
-      } else {
-        isDeleting = !isDeleting; // Toggle deleting state
-        setTimeout(typeEffect, delay); // Pause before switching
-      }
-    }
-  
-    typeEffect(); // Start the loop
-  });
-  </script>
 
-<script src="./js/particle.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const text = "Contact Us";
+        const speed = 150;
+        const backSpeed = 100; 
+        const delay = 1000; 
+        let index = 0;
+        let isDeleting = false;
+        const dateElement = document.querySelector(".framen-text h2");
 
+        function typeEffect() {
+          if (!isDeleting && index < text.length) {
+            dateElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, speed);
+          } else if (isDeleting && index > 0) {
+            dateElement.innerHTML = text.substring(0, index - 1);
+            index--;
+            setTimeout(typeEffect, backSpeed);
+          } else {
+            isDeleting = !isDeleting; 
+            setTimeout(typeEffect, delay); 
+          }
+        }
+
+        typeEffect();
+      });
+    </script>
+
+    <script src="./js/particle.js"></script>
   </body>
 </html>
