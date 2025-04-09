@@ -678,24 +678,37 @@ right: auto;
   z-index: 2;
 }
 
+
+.gallery-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Ensures aspect ratio fits nicely */
+}
+
+.rotate-left {
+  transform: rotate(-90deg);
+}
 .frame3 .gallery {
   width: 80%;
   left: 10%;
   text-align: center;
   overflow: hidden;
   position: relative;
+  
 }
 
 .frame3 .gallery .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
+ 
 }
 
 .frame3 .gallery .carousel img {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   filter: grayscale(100%);
-  width: 62%; 
+ height : 500px;
+ width: 1200px;
   margin: 0 15px; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -709,6 +722,7 @@ right: auto;
     black 80%,
     transparent
   );
+  object-fit: cover;
 }
 
 .frame3 .gallery .carousel img.active {
