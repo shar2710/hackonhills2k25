@@ -2275,6 +2275,396 @@
           </div>
         </div>
       </div>
+      
+      <div class="frame frame-timeline">
+        <div class="frame-timeline-content">
+          <h1>Event Timeline</h1>
+          <div class="timeline">
+            <div class="outer">
+      
+              <div class="card heading-card">
+                <div class="info">
+                  <h3 class="title">DAY 1 - 11th April 2025</h3>
+                  <p>Kickstart Hack on Hills 6.0 with exciting events and the Nimbus Pre-Launch!</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Opening (With Nimbus Pre-Launch)</h3>
+                  <p>Join us for the grand opening ceremony that also marks the Nimbus Pre-Launch event.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Offline Check-ins [10AM - 3PM]</h3>
+                  <p>Participants must complete registration at the venue during this window.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Hacking Starts [2PM onwards]</h3>
+                  <p>Get your laptops ready — the hackathon officially kicks off!</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Endless Domains Talk [4PM]</h3>
+                  <p>Explore various domains through this interactive tech session.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Mentoring [6PM - 10PM]</h3>
+                  <p>Get guidance from industry experts to elevate your projects.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Wrap Up [11PM - 12AM]</h3>
+                  <p>End the day with insights, progress, and late-night collaboration.</p>
+                </div>
+              </div>
+      
+              <div class="card heading-card">
+                <div class="info">
+                  <h3 class="title">DAY 2 - 12th April 2025</h3>
+                  <p>Keep the momentum going with evaluations, mentoring, and open judging!</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Start [4AM onwards]</h3>
+                  <p>Early birds can begin enhancing and refining their hacks.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Evaluation I [10AM - 1PM]</h3>
+                  <p>Initial round of judging begins. Be ready to showcase progress.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Mentoring [6PM - 10PM]</h3>
+                  <p>Refine your approach with expert advice and feedback.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Parallel Open Exhibition Judging [6PM - 10PM]</h3>
+                  <p>Showcase your projects to the wider audience and judges in parallel sessions.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Wrap Up [11PM - 12AM]</h3>
+                  <p>Recap the day, discuss progress, and prepare for the final push.</p>
+                </div>
+              </div>
+      
+              <div class="card heading-card">
+                <div class="info">
+                  <h3 class="title">DAY 3 - 13th April 2025</h3>
+                  <p>The grand finale: make your final presentations and await the results!</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Submission By [9:30AM sharp]</h3>
+                  <p>Ensure your code and presentations are submitted on time.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Judging/Presentation [10AM - 1PM, 2PM - 3PM]</h3>
+                  <p>Present your work to the panel of esteemed judges.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Evaluation [3PM - 4PM]</h3>
+                  <p>Final evaluation of top teams based on creativity, impact, and execution.</p>
+                </div>
+              </div>
+      
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Results and Closing [4PM - 6PM]</h3>
+                  <p>Celebrate the end of an incredible hackathon journey and meet the winners!</p>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<style>
+   .card.heading-card {
+        float: none !important;
+        width: 60% !important;
+        margin: 40px auto !important;
+        text-align: center !important;
+        transform: scale(1.03);
+      }
+      
+      .card.heading-card::before {
+        display: none;
+      }
+      
+      @media (max-width: 900px) {
+        .card.heading-card {
+          width: 90% !important;
+        }
+      }
+
+.frame-timeline {
+  background-color: #2E236C;
+  padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.frame-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(125deg, rgba(0, 209, 255, 0.03) 25%, transparent 25%) 0 0,
+              linear-gradient(225deg, rgba(0, 209, 255, 0.03) 25%, transparent 25%) 0 0;
+  background-size: 60px 60px;
+  opacity: 0.4;
+  animation: gradientShift 30s linear infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+.frame-timeline-content {
+  position: relative;
+  text-align: center;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.frame-timeline-content h1 {
+  margin-bottom: 60px;
+  font-size: 3em;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0, 209, 255, 0.7), 0 0 20px rgba(0, 209, 255, 0.5);
+  animation: pulsateText 3s ease-in-out infinite;
+}
+
+@keyframes pulsateText {
+  0% { text-shadow: 0 0 10px rgba(0, 209, 255, 0.7), 0 0 20px rgba(0, 209, 255, 0.5); }
+  50% { text-shadow: 0 0 15px rgba(0, 209, 255, 0.9), 0 0 30px rgba(0, 209, 255, 0.7); }
+  100% { text-shadow: 0 0 10px rgba(0, 209, 255, 0.7), 0 0 20px rgba(0, 209, 255, 0.5); }
+}
+
+.timeline {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline .outer {
+  padding: 20px 0;
+  position: relative;
+}
+
+.timeline .outer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 209, 255, 0.3), #00D1FF, rgba(0, 209, 255, 0.3));
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(0, 209, 255, 0.7);
+  animation: timelineGlow 4s ease-in-out infinite;
+}
+
+@keyframes timelineGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 209, 255, 0.7); }
+  50% { box-shadow: 0 0 25px rgba(0, 209, 255, 1); }
+}
+
+.timeline .card {
+  position: relative;
+  width: 45%;
+  margin-bottom: 16px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline .card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.timeline .card::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(0, 209, 255, 0.5), 0 0 15px rgba(0, 209, 255, 1);
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.timeline .card:hover::before {
+  background: #00D1FF;
+  transform: scale(1.2);
+  box-shadow: 0 0 0 4px rgba(0, 209, 255, 0.5), 0 0 20px rgba(0, 209, 255, 1);
+}
+
+.timeline .card:nth-child(odd) {
+  float: left;
+  clear: both;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.timeline .card:nth-child(odd)::before {
+  right: -8px;
+}
+
+.timeline .card:nth-child(even) {
+  float: right;
+  clear: both;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.timeline .card:nth-child(even)::before {
+  left: -8px;
+}
+
+.timeline .info {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-left: 4px solid #00D1FF;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline .info:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 209, 255, 0.3);
+  border-left: 4px solid white;
+}
+
+.timeline .title {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(0, 209, 255, 0.7);
+}
+
+.timeline .info p {
+  color: #E0E0FF;
+  font-size: 1em;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+
+.timeline .outer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.timeline .card:nth-child(1) { transition-delay: 0.1s; }
+.timeline .card:nth-child(2) { transition-delay: 0.3s; }
+.timeline .card:nth-child(3) { transition-delay: 0.5s; }
+.timeline .card:nth-child(4) { transition-delay: 0.7s; }
+.timeline .card:nth-child(5) { transition-delay: 0.9s; }
+
+@media (max-width: 900px) {
+  .timeline .outer::before {
+    left: 20px;
+  }
+  
+  .timeline .card {
+    width: calc(100% - 70px);
+    margin-bottom: 40px;
+  }
+  
+  .timeline .card:nth-child(odd),
+  .timeline .card:nth-child(even) {
+    float: right;
+    clear: both;
+    text-align: left;
+    padding-left: 50px;
+  }
+  
+  .timeline .card:nth-child(odd)::before,
+  .timeline .card:nth-child(even)::before {
+    left: -10px;
+    right: auto !important;
+  }
+}
+
+.card.heading-card {
+  display: block;
+  float: none;
+  clear: both;
+}
+
+
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.timeline .card');
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    cards.forEach(card => observer.observe(card));
+  });</script>
+
+
       <div class="frame frame4">
         <div class="rotated"></div>
         <div class="rotated2"></div>
